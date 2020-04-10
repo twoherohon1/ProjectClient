@@ -42,7 +42,7 @@ function App() {
   }
   return (
     <div>
-      <h1>ToDo</h1>
+      <h1>Cargo</h1>
       <input type="text" name="name" onChange={(e) => { setName(e.target.value) }} />
       <input type="text" image="image" onChange={(e) => { setImage(e.target.value) }} />
       <button onClick={addTask}>Submit</button>
