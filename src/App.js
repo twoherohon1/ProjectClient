@@ -3,7 +3,9 @@ import './App.css';
 import LoginForm from './components/LoginForm';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './components/Home';
-// import Store from './components/Store'
+
+import Store from './components/Store';
+
 
 
 const App = () => {
@@ -18,6 +20,12 @@ const App = () => {
            <Route
             path="/home"
             component={Home}
+            exact={true}
+          />
+         
+            <Route
+            path="/store"
+            component={Store}
             exact={true}
           />
         </Switch>

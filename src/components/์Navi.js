@@ -3,20 +3,16 @@ import {Navbar,Button,Form,Nav,NavDropdown,FormControl} from 'react-bootstrap';
 
 const Home = (props) => {
     return (
-      <>
         <Navbar bg="light" expand="lg">
-        <Navbar fixed="top" />
-        <Navbar.Brand
-        onClick={() => props.history.push('/home')}
-        >Medicine</Navbar.Brand>
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link     onClick={() => props.history.push('/home')}>Home</Nav.Link>
+            <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link 
             // href="#link"
             onClick={() => props.history.push('/store')}
-            >Store</Nav.Link>
+            >Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -31,8 +27,6 @@ const Home = (props) => {
           </Form>
         </Navbar.Collapse>
       </Navbar>
-      <div>123</div>
-      </>
     )
 }
 export default Home

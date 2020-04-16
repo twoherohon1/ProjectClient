@@ -6,14 +6,14 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { Button } from 'react-bootstrap';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDq-5ifSogscSWdRcqorSLbmKEBZKZ3_IE",
-  authDomain: "authen-6c28d.firebaseapp.com",
-  databaseURL: "https://authen-6c28d.firebaseio.com",
-  projectId: "authen-6c28d",
-  storageBucket: "authen-6c28d.appspot.com",
-  messagingSenderId: "326880503773",
-  appId: "1:326880503773:web:d4a82b9a0dbc01462a3834",
-  measurementId: "G-H20XVGTP3X"
+  apiKey: "AIzaSyCZYkIS8lIRGaH_OnQiSNzjHKteaVW2S7c",
+  authDomain: "miniproject-cf0cb.firebaseapp.com",
+  databaseURL: "https://miniproject-cf0cb.firebaseio.com",
+  projectId: "miniproject-cf0cb",
+  storageBucket: "miniproject-cf0cb.appspot.com",
+  messagingSenderId: "261176928598",
+  appId: "1:261176928598:web:df2e8a3913b019f6ad4ef7",
+  measurementId: "G-VSJ5DJXQ8V"
 };
 
 firebase.initializeApp(firebaseConfig);
