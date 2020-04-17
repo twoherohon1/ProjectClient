@@ -3,8 +3,8 @@ import './App.css';
 import LoginForm from './components/LoginForm';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './components/Home';
-
 import Store from './components/Store';
+import User from './components/User'
 
 
 
@@ -26,6 +26,11 @@ const App = () => {
             <Route
             path="/store"
             component={Store}
+            exact={true}
+          />
+          <Route
+            path="/storeuser"
+            component={User}
             exact={true}
           />
         </Switch>

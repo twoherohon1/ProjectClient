@@ -63,7 +63,6 @@ const LoginForm = (props) => {
     return (
       <div className="container">
         <h1>Medicine Shop</h1>
-        <h1>Can Buy Price Member</h1>
         <p>Welcome {firebase.auth().currentUser.displayName}! You are now signed-in</p>
         <img id="photo" className="pic" src={firebase.auth().currentUser.photoURL} />
         <div style={{flexDirection:'row' }}>

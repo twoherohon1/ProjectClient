@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Store.css';
 import { firestore } from '../index'
 import { Button, Card, Form, Navbar, Nav, FormControl } from 'react-bootstrap';
+// import Task from './Task'
 
 const Store = (props) => {
 
@@ -46,8 +47,8 @@ const Store = (props) => {
                 <Card.Text>
                   Detail : {task.detail}
                 </Card.Text>
-                <Button variant="danger" onClick={() => deleteTask(task.id)}>Delete</Button>
-                <Button variant="warning" style={{ marginLeft: 10 }} onClick={() => editTask(task.id)}>Edit</Button>
+                {/* <Button variant="danger" onClick={() => deleteTask(task.id)}>Delete</Button>
+                <Button variant="warning" style={{ marginLeft: 10 }} onClick={() => editTask(task.id)}>Edit</Button> */}
               </Card.Body>
             </Card>
 
@@ -88,43 +89,6 @@ const Store = (props) => {
       </Navbar>
       <div style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <h1>Cargo</h1>
-        <Form >
-          <Form.Group controlId="formGroupName">
-            <Form.Label>Name</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Name" value={name}
-              onChange={(e) => { setName(e.target.value) }}
-              style={{ width: 300 }}
-            />
-          </Form.Group>
-          <Form.Group controlId="formGroupImage">
-            <Form.Label>Image URL</Form.Label>
-            <Form.Control type="text"
-              placeholder="Image URL"
-              value={image}
-              onChange={(e) => { setImage(e.target.value) }}
-              style={{ width: 300 }}
-            />
-          </Form.Group>
-          <Form.Group controlId="formGroupPrice">
-            <Form.Label>Price</Form.Label>
-            <Form.Control type="text"
-              placeholder="Price" value={price}
-              onChange={(e) => { setPrice(e.target.value) }}
-              style={{ width: 300 }}
-            />
-          </Form.Group>
-          <Form.Group controlId="formGroupDetail">
-            <Form.Label>Detail</Form.Label>
-            <Form.Control type="text"
-              placeholder="Detail" value={detail}
-              onChange={(e) => { setDetail(e.target.value) }}
-              style={{ width: 300 }}
-            />
-          </Form.Group>
-        </Form>
-        <Button variant="success" style={{ margin: 5, alignContent: 'center' }} onClick={addTask}>Add</Button>
         <ul style={{ display: 'flex', flex: 1, flexDirection: 'column' }}>{rederTask()}</ul>
       </div>
     </>
