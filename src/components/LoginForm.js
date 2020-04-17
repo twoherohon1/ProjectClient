@@ -62,12 +62,14 @@ const LoginForm = (props) => {
   else {
     return (
       <div className="container">
-        <h1>Medicine Shop</h1>
+        <h1>Hero's Pharmacy</h1>
+        <h2>Medicine Shop</h2>
         <p>Welcome {firebase.auth().currentUser.displayName}! You are now signed-in</p>
         <img id="photo" className="pic" src={firebase.auth().currentUser.photoURL} />
         <div style={{flexDirection:'row' }}>
           <Button variant="primary" style={{margin:10}} onClick={() => props.history.push('/home')}>Home</Button>
         <Button variant="warning" onClick={() => firebase.auth().signOut()}>Sign-out</Button>
+        <p>Please go to HomePage</p>
         </div>
         
       </div>

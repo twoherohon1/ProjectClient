@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './components/Home';
 import Store from './components/Store';
 import User from './components/User'
-
+import Sick from './components/Sickness'
 
 
 const App = () => {
@@ -31,6 +31,11 @@ const App = () => {
           <Route
             path="/storeuser"
             component={User}
+            exact={true}
+          />
+           <Route
+            path="/sick"
+            component={Sick}
             exact={true}
           />
         </Switch>

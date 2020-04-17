@@ -1,11 +1,10 @@
 import React from 'react';
 import { Navbar, Button, Form, Nav, FormControl } from 'react-bootstrap';
-import './Home.css'
 
-const Home = (props) => {
-  return (
-    <>
-      <Navbar bg="light" expand="lg">
+const Sickness= (props)=>{
+    return(
+        <>
+        <Navbar bg="light" expand="lg">
         <Navbar fixed="top" />
         <Navbar.Brand>
         <img src="https://i.pinimg.com/originals/79/5f/a2/795fa2a19893756633d929cfc218e0e5.png" width="150"  height="70"></img>
@@ -34,8 +33,10 @@ const Home = (props) => {
           </Form>
         </Navbar.Collapse>
       </Navbar>
-      <div>123</div>
-    </>
-  )
+        <div>
+            12345
+        </div>
+        </>
+    )
 }
-export default Home
+export default Sickness

@@ -66,23 +66,30 @@ const Store = (props) => {
     <>
       <Navbar bg="light" expand="lg">
         <Navbar fixed="top" />
-        <Navbar.Brand
-        onClick={() => props.history.push('/home')}
-        >Medicine</Navbar.Brand>
+        <Navbar.Brand>
+        <img src="https://i.pinimg.com/originals/79/5f/a2/795fa2a19893756633d929cfc218e0e5.png" width="150"  height="70"></img>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link
-              onClick={() => props.history.push('/home')}
-            >Home</Nav.Link>
+              onClick={() => props.history.push('/home')}>
+              Home
+              </Nav.Link>
             <Nav.Link
               onClick={() => props.history.push('/store')}
-            >Store</Nav.Link>
-
+            >Store
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => props.history.push('/sick')}
+            >Sick
+            </Nav.Link>
           </Nav>
           <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
+            <Nav.Link
+              onClick={() => props.history.push('/login')}
+            >MyProfile
+            </Nav.Link>
           </Form>
         </Navbar.Collapse>
       </Navbar>
