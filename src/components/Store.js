@@ -64,7 +64,7 @@ const Store = (props) => {
   }
   return (
     <>
-      <Navbar bg="light" expand="lg">
+       <Navbar bg="light" expand="lg">
         <Navbar fixed="top" />
         <Navbar.Brand>
         <img src="https://i.pinimg.com/originals/79/5f/a2/795fa2a19893756633d929cfc218e0e5.png" width="150"  height="70"></img>
@@ -77,12 +77,12 @@ const Store = (props) => {
               Home
               </Nav.Link>
             <Nav.Link
-              onClick={() => props.history.push('/storeuser')}
-            >Store
+              onClick={() => props.history.push('/editcargo')}
+            >EditCargo
             </Nav.Link>
             <Nav.Link
-              onClick={() => props.history.push('/sick')}
-            >Sick
+              onClick={() => props.history.push('/editsick')}
+            >EditSick
             </Nav.Link>
           </Nav>
           <Form inline>

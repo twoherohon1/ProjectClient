@@ -6,7 +6,8 @@ import Home from './components/Home';
 import Store from './components/Store';
 import User from './components/User'
 import Sick from './components/Sickness'
-
+import Editadmin from './components/Editadmin';
+import Editsick from './components/Editsick';
 
 const App = () => {
   return (
@@ -24,7 +25,7 @@ const App = () => {
           />
          
             <Route
-            path="/store"
+            path="/editcargo"
             component={Store}
             exact={true}
           />
@@ -36,6 +37,16 @@ const App = () => {
            <Route
             path="/sick"
             component={Sick}
+            exact={true}
+          />
+          <Route
+            path="/admin"
+            component={Editadmin}
+            exact={true}
+          />
+          <Route
+            path="/editsick"
+            component={Editsick}
             exact={true}
           />
         </Switch>
