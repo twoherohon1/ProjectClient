@@ -10,6 +10,7 @@ const Store = (props) => {
   const [price, setPrice] = useState('')
   const [image, setImage] = useState('')
   const [detail, setDetail] = useState('')
+  const [amount, setAmount] = useState('')
 
   useEffect(() => {
     retrivData()
@@ -18,8 +19,8 @@ const Store = (props) => {
   const retrivData = () => {
     firestore.collection("tasks").onSnapshot((snapshot) => {
       let myTask = snapshot.docs.map(d => {
-        const { id, image, name, price,detail } = d.data()
-        return { id, image, name, price,detail }
+        const { id, image, name, price,detail,amount } = d.data()
+        return { id, image, name, price,detail,amount }
       })
       setTask(myTask)
 
@@ -29,7 +30,7 @@ const Store = (props) => {
     firestore.collection("tasks").doc(id + '').delete()
   }
   const editTask = (id) => {
-    firestore.collection("tasks").doc(id + '').set({ id, image, name, price,detail })
+    firestore.collection("tasks").doc(id + '').set({ id, image, name, price,detail,amount })
   }
   const rederTask = () => {
     if (tasks && tasks.length)
@@ -46,6 +47,9 @@ const Store = (props) => {
                 <Card.Text>
                   Detail : {task.detail}
                 </Card.Text>
+                <Card.Text>
+                  Amount : {task.amount} ชิ้น
+                </Card.Text>
                 <Button variant="danger" onClick={() => deleteTask(task.id)}>Delete</Button>
                 <Button variant="warning" style={{ marginLeft: 10 }} onClick={() => editTask(task.id)}>Edit</Button>
               </Card.Body>
@@ -60,7 +64,7 @@ const Store = (props) => {
   }
   const addTask = () => {
     let id = (tasks.length === 0) ? 1 : tasks[tasks.length - 1].id + 1
-    firestore.collection("tasks").doc(id + '').set({ id, image, name, price, detail })
+    firestore.collection("tasks").doc(id + '').set({ id, image, name, price, detail,amount })
   }
   return (
     <>
@@ -127,6 +131,14 @@ const Store = (props) => {
             <Form.Control type="text"
               placeholder="Detail" value={detail}
               onChange={(e) => { setDetail(e.target.value) }}
+              style={{ width: 300 }}
+            />
+          </Form.Group>
+          <Form.Group controlId="formGroupDetail">
+            <Form.Label>Amount</Form.Label>
+            <Form.Control type="text"
+              placeholder="Amount" value={amount}
+              onChange={(e) => { setAmount(e.target.value) }}
               style={{ width: 300 }}
             />
           </Form.Group>
