@@ -77,7 +77,7 @@ const Store = (props) => {
               Home
               </Nav.Link>
             <Nav.Link
-              onClick={() => props.history.push('/store')}
+              onClick={() => props.history.push('/storeuser')}
             >Store
             </Nav.Link>
             <Nav.Link

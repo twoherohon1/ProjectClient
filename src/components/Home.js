@@ -1,10 +1,13 @@
 import React from 'react';
 import { Navbar, Button, Form, Nav, FormControl } from 'react-bootstrap';
 import './Home.css'
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import '../config'
 
 const Home = (props) => {
   return (
-    <>
+      <div>
       <Navbar bg="light" expand="lg">
         <Navbar fixed="top" />
         <Navbar.Brand>
@@ -18,7 +21,7 @@ const Home = (props) => {
               Home
               </Nav.Link>
             <Nav.Link
-              onClick={() => props.history.push('/store')}
+              onClick={() => props.history.push('/storeuser')}
             >Store
             </Nav.Link>
             <Nav.Link
@@ -29,13 +32,17 @@ const Home = (props) => {
           <Form inline>
             <Nav.Link
               onClick={() => props.history.push('/login')}
-            >MyProfile
+            >MyProfile 
             </Nav.Link>
+            {firebase.auth().currentUser.email=="twoherohon1@gmail.com"?
+            <Nav.Link
+            onClick={() => props.history.push('/store')}
+          >AdminEdit 
+          </Nav.Link>:<div></div>}
           </Form>
         </Navbar.Collapse>
       </Navbar>
-      <div>123</div>
-    </>
+      </div>
   )
 }
 export default Home
