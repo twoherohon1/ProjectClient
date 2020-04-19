@@ -5,6 +5,7 @@ import 'firebase/auth';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { Button } from 'react-bootstrap';
 import firebaseConfig from '../config'
+
 // const firebaseConfig = {
 //   apiKey: "AIzaSyCZYkIS8lIRGaH_OnQiSNzjHKteaVW2S7c",
 //   authDomain: "miniproject-cf0cb.firebaseapp.com",

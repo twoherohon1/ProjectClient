@@ -2,12 +2,12 @@ import React from 'react';
 import { Navbar, Button, Form, Nav, FormControl } from 'react-bootstrap';
 import './Home.css'
 import firebase from 'firebase/app';
-import 'firebase/auth';
-import '../config'
+
+
 
 const Home = (props) => {
   return (
-      <div>
+      <div> 
       <Navbar bg="light" expand="lg">
         <Navbar fixed="top" />
         <Navbar.Brand>
@@ -42,6 +42,7 @@ const Home = (props) => {
           </Form>
         </Navbar.Collapse>
       </Navbar>
+      <img src="https://cdn4.vectorstock.com/i/1000x1000/56/08/pharmacy-banner-medicine-medical-supplies-vector-15075608.jpg" width="100%" height="400px"></img>
       </div>
   )
 }
