@@ -23,6 +23,11 @@ const App = () => {
             component={Home}
             exact={true}
           />
+           <Route
+            path="/"
+            component={LoginForm}
+            exact={true}
+          />
          
             <Route
             path="/editcargo"
