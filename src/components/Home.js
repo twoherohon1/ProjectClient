@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Button, Form, Nav, FormControl,Carousel } from 'react-bootstrap';
+import { Navbar, Button, Form, Nav, FormControl, Carousel } from 'react-bootstrap';
 import './Home.css'
 import firebase from 'firebase/app';
 
@@ -46,38 +46,45 @@ const Home = (props) => {
         <Carousel.Item>
           <img
             className="d-block w-100"
+            src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/purple-welcome-church-flyer-template-3f80fcded207c8067465df6b0a3caf0e_screen.jpg?ts=1561468679"
+            width="100%"
+            height="400px"
+            alt="Third slide"
+          />
+
+          <Carousel.Caption>
+            <h3>Welcome</h3>
+            <p>Welcome to Pharmacy</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
             src="http://www.brandage.com/images/paragraph/48C8A3C-AF07B3C-80E6B36.jpg"
-            alt="First slide"
+            width="100%"
+            height="400px"
+            alt="This shop sale medicine"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>This shop sale medicine</h3>
+            <p>All medicine in shop</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
             src="http://www.brandage.com/images/paragraph/37E97B0-E2E15C3-EE51F33.jpg"
+            width="100%"
+            height="400px"
             alt="Third slide"
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Pharmacy</h3>
+            <p>If want to buy ciick Store</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://www.chicrepublicthai.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/R/W/RWA055-IRIR-AB1AB1-1_1.jpg"
-            alt="Third slide"
-          />
 
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
       </Carousel>
     </div>
   )
