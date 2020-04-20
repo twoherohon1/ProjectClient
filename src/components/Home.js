@@ -60,31 +60,31 @@ const Home = (props) => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="http://www.brandage.com/images/paragraph/48C8A3C-AF07B3C-80E6B36.jpg"
+            src="https://www.pngkey.com/png/detail/205-2050128_directive-on-compulsory-use-of-community-pharmacy-logo.png"
             width="100%"
             height="400px"
             alt="This shop sale medicine"
           />
           <Carousel.Caption>
-            <h3>This shop sale medicine</h3>
-            <p>All medicine in shop</p>
+            <h3 style={{color:"black"}}>This shop sale medicine</h3>
+            <p style={{color:"black"}}>All medicine in shop</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="http://www.brandage.com/images/paragraph/37E97B0-E2E15C3-EE51F33.jpg"
+            src="https://image.freepik.com/free-vector/medical-pharmacy-logo_7888-26.jpg"
             width="100%"
             height="400px"
             alt="Third slide"
           />
 
           <Carousel.Caption>
-            <h3>Pharmacy</h3>
-            <p>If want to buy ciick Store</p>
+            <h3 style={{color:"black"}}>Pharmacy</h3>
+            <p style={{color:"black"}}>If want to buy ciick Store</p>
           </Carousel.Caption>
         </Carousel.Item>
-
+        
       </Carousel>
     </div>
   )
