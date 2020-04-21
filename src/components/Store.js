@@ -78,7 +78,7 @@ const Store = (props) => {
           <Nav className="mr-auto">
             <Nav.Link
               onClick={() => props.history.push('/home')}>
-              Home
+              ReturnHome
               </Nav.Link>
             <Nav.Link
               onClick={() => props.history.push('/editcargo')}

@@ -5,8 +5,8 @@ import { Button, Card, Form, Navbar, Nav, FormControl } from 'react-bootstrap';
 
 const Store = (props) => {
 
-  const [tasks, setTask] = useState([])
-  const [name, setName] = useState('')
+  const [tasks1, setTasks1] = useState([])
+  const [sickness, setSickness] = useState('')
   const [price, setPrice] = useState('')
   const [image, setImage] = useState('')
   const [detail, setDetail] = useState('')
@@ -17,30 +17,30 @@ const Store = (props) => {
   }, [])
 
   const retrivData = () => {
-    firestore.collection("tasks").onSnapshot((snapshot) => {
+    firestore.collection("tasks1").onSnapshot((snapshot) => {
       let myTask = snapshot.docs.map(d => {
-        const { id, image, name, price,detail,amount } = d.data()
-        return { id, image, name, price,detail,amount }
+        const { id, image, sickness, price,detail,amount } = d.data()
+        return { id, image, sickness, price,detail,amount }
       })
-      setTask(myTask)
+      setTasks1(myTask)
 
     })
   }
   const deleteTask = (id) => {
-    firestore.collection("tasks").doc(id + '').delete()
+    firestore.collection("tasks1").doc(id + '').delete()
   }
   const editTask = (id) => {
-    firestore.collection("tasks").doc(id + '').set({ id, image, name, price,detail,amount })
+    firestore.collection("tasks1").doc(id + '').set({ id, image, sickness, price,detail,amount })
   }
   const rederTask = () => {
-    if (tasks && tasks.length)
-      return tasks.map((task, index) => {
+    if (tasks1 && tasks1.length)
+      return tasks1.map((task, index) => {
         return (
           <>
             <Card style={{ width: '18rem', marginTop: 10 }}>
               <Card.Img variant="top" src={task.image} />
               <Card.Body>
-                <Card.Title>Name : {task.name}</Card.Title>
+                <Card.Title> โรค : {task.sickness}</Card.Title>
                 <Card.Text>
                   Price : {task.price}
                 </Card.Text>
@@ -63,8 +63,8 @@ const Store = (props) => {
       return <li>No Task</li>
   }
   const addTask = () => {
-    let id = (tasks.length === 0) ? 1 : tasks[tasks.length - 1].id + 1
-    firestore.collection("tasks").doc(id + '').set({ id, image, name, price, detail,amount })
+    let id = (tasks1.length === 0) ? 1 : tasks1[tasks1.length - 1].id + 1
+    firestore.collection("tasks1").doc(id + '').set({ id, image, sickness, price, detail,amount })
   }
   return (
     <>
@@ -101,11 +101,11 @@ const Store = (props) => {
         <h1>Cargo</h1>
         <Form >
           <Form.Group controlId="formGroupName">
-            <Form.Label>Name</Form.Label>
+            <Form.Label>โรค</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Name" value={name}
-              onChange={(e) => { setName(e.target.value) }}
+              placeholder="Sickness" value={sickness}
+              onChange={(e) => { setSickness(e.target.value) }}
               style={{ width: 300 }}
             />
           </Form.Group>

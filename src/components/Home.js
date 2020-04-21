@@ -7,7 +7,7 @@ import firebase from 'firebase/app';
 
 const Home = (props) => {
   return (
-    <div>
+    <div className="App2">
       <Navbar bg="light" expand="lg">
         <Navbar fixed="top" />
         <Navbar.Brand>
@@ -66,8 +66,8 @@ const Home = (props) => {
             alt="This shop sale medicine"
           />
           <Carousel.Caption>
-            <h3 style={{color:"black"}}>This shop sale medicine</h3>
-            <p style={{color:"black"}}>All medicine in shop</p>
+            <h3 style={{ color: "black" }}>This shop sale medicine</h3>
+            <p style={{ color: "black" }}>All medicine in shop</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -80,12 +80,24 @@ const Home = (props) => {
           />
 
           <Carousel.Caption>
-            <h3 style={{color:"black"}}>Pharmacy</h3>
-            <p style={{color:"black"}}>If want to buy ciick Store</p>
+            <h3 style={{ color: "black" }}>Pharmacy</h3>
+            <p style={{ color: "black" }}>If want to buy ciick Store</p>
           </Carousel.Caption>
         </Carousel.Item>
-        
+
       </Carousel>
+      <h1 className="App">อัพเดตขาวสาร</h1>
+      <a href="https://www.bangkokbiznews.com/news/detail/869973">
+      <img src="https://image.bangkokbiznews.com/kt/media/image/news/2020/03/10/869973/750x422_869973_1583811858.png"  className="App1"></img>
+      </a>
+      <h2 className="App">COVID-19</h2>
+      <p>
+        ก่อนอื่นต้องทำความเข้าใจว่าไวรัสโคโรนา (Cov) คือ ไวรัสที่มีเครือข่ายขนาดใหญ่สามารถพบได้ทั้งในคนสัตว์
+        โดยไวรัสโคโรนาเป็นสาเหตุของความเจ็บป่วยหลากหลายระดับตั้งแต่ อาการหวัดธรรมดาจนไปถึงโรคระบบทางเดินหายใจ ซึ่งเกี่ยวข้องกับหลายโรคร้ายแรงอย่าง
+        MERS และ SARS ส่วนไวรัสโคโรนาในปัจจุบัน คือ โรค COVID-19 โดย คำว่า COVID-19 มีที่มาดังนี้ Co มาจากคำว่า Corona, VI มาจากคำว่า Virus ส่วน
+        D มาจาก Disease ซึ่งแปลว่าโรค ส่วน 19 คือ ปี 2019 สำหรับผู้ป่วยจะมีอาการเกี่ยวกับระบบทางเดินหายใจเป็นหลัก
+        ซึ่งระดับความรุนแรงคล้ายกันกับโรคทางเดินหายใจทั้งโรค MERS และ SARS
+      </p>
     </div>
   )
 }
