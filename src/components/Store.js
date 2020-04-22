@@ -97,7 +97,7 @@ const Store = (props) => {
           </Form>
         </Navbar.Collapse>
       </Navbar>
-      <div style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <div className="App1" style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <h1>Cargo</h1>
         <Form >
           <Form.Group controlId="formGroupName">

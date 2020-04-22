@@ -86,7 +86,7 @@ const Home = (props) => {
         </Carousel.Item>
 
       </Carousel>
-      <h1 className="App">อัพเดตขาวสาร</h1>
+      <h1 className="App">อัพเดตข่าวสาร</h1>
       <a href="https://www.bangkokbiznews.com/news/detail/869973">
       <img src="https://image.bangkokbiznews.com/kt/media/image/news/2020/03/10/869973/750x422_869973_1583811858.png"  className="App1"></img>
       </a>

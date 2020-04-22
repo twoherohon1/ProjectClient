@@ -7,10 +7,9 @@ const Store = (props) => {
 
   const [tasks1, setTasks1] = useState([])
   const [sickness, setSickness] = useState('')
-  const [price, setPrice] = useState('')
-  const [image, setImage] = useState('')
-  const [detail, setDetail] = useState('')
-  const [amount, setAmount] = useState('')
+  const [symptom, setSymptom] = useState('')
+  const [dispensing, setDispensing] = useState('')
+  const [warning, setWarning] = useState('')
 
   useEffect(() => {
     retrivData()
@@ -19,8 +18,8 @@ const Store = (props) => {
   const retrivData = () => {
     firestore.collection("tasks1").onSnapshot((snapshot) => {
       let myTask = snapshot.docs.map(d => {
-        const { id, image, sickness, price,detail,amount } = d.data()
-        return { id, image, sickness, price,detail,amount }
+        const { id, dispensing, sickness, symptom,warning } = d.data()
+        return { id, dispensing, sickness, symptom,warning }
       })
       setTasks1(myTask)
 
@@ -30,7 +29,7 @@ const Store = (props) => {
     firestore.collection("tasks1").doc(id + '').delete()
   }
   const editTask = (id) => {
-    firestore.collection("tasks1").doc(id + '').set({ id, image, sickness, price,detail,amount })
+    firestore.collection("tasks1").doc(id + '').set({ id, dispensing, sickness, symptom,warning })
   }
   const rederTask = () => {
     if (tasks1 && tasks1.length)
@@ -38,17 +37,16 @@ const Store = (props) => {
         return (
           <>
             <Card style={{ width: '18rem', marginTop: 10 }}>
-              <Card.Img variant="top" src={task.image} />
               <Card.Body>
                 <Card.Title> โรค : {task.sickness}</Card.Title>
                 <Card.Text>
-                  Price : {task.price}
+                  อาการ : {task.symptom}
                 </Card.Text>
                 <Card.Text>
-                  Detail : {task.detail}
+                  อาการ : {task.dispensing}
                 </Card.Text>
                 <Card.Text>
-                  Amount : {task.amount} ชิ้น
+                  คำเตือน : {task.warning}
                 </Card.Text>
                 <Button variant="danger" onClick={() => deleteTask(task.id)}>Delete</Button>
                 <Button variant="warning" style={{ marginLeft: 10 }} onClick={() => editTask(task.id)}>Edit</Button>
@@ -64,7 +62,7 @@ const Store = (props) => {
   }
   const addTask = () => {
     let id = (tasks1.length === 0) ? 1 : tasks1[tasks1.length - 1].id + 1
-    firestore.collection("tasks1").doc(id + '').set({ id, image, sickness, price, detail,amount })
+    firestore.collection("tasks1").doc(id + '').set({ id,dispensing , sickness, symptom, warning })
   }
   return (
     <>
@@ -109,36 +107,28 @@ const Store = (props) => {
               style={{ width: 300 }}
             />
           </Form.Group>
-          <Form.Group controlId="formGroupImage">
-            <Form.Label>Image URL</Form.Label>
+          <Form.Group controlId="formGroupDispensing">
+            <Form.Label>Dispensing</Form.Label>
             <Form.Control type="text"
-              placeholder="Image URL"
-              value={image}
-              onChange={(e) => { setImage(e.target.value) }}
+              placeholder="text"
+              value={dispensing}
+              onChange={(e) => { setDispensing(e.target.value) }}
               style={{ width: 300 }}
             />
           </Form.Group>
-          <Form.Group controlId="formGroupPrice">
-            <Form.Label>Price</Form.Label>
+          <Form.Group controlId="formGroupSymptom">
+            <Form.Label>Symptom</Form.Label>
             <Form.Control type="text"
-              placeholder="Price" value={price}
-              onChange={(e) => { setPrice(e.target.value) }}
+              placeholder="Symptom" value={symptom}
+              onChange={(e) => { setSymptom(e.target.value) }}
               style={{ width: 300 }}
             />
           </Form.Group>
-          <Form.Group controlId="formGroupDetail">
-            <Form.Label>Detail</Form.Label>
+          <Form.Group controlId="formGroupWarning">
+            <Form.Label>Warning</Form.Label>
             <Form.Control type="text"
-              placeholder="Detail" value={detail}
-              onChange={(e) => { setDetail(e.target.value) }}
-              style={{ width: 300 }}
-            />
-          </Form.Group>
-          <Form.Group controlId="formGroupDetail">
-            <Form.Label>Amount</Form.Label>
-            <Form.Control type="text"
-              placeholder="Amount" value={amount}
-              onChange={(e) => { setAmount(e.target.value) }}
+              placeholder="Warningl" value={warning}
+              onChange={(e) => { setWarning(e.target.value) }}
               style={{ width: 300 }}
             />
           </Form.Group>
