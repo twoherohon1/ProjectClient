@@ -27,12 +27,6 @@ const Store = (props) => {
 
     })
   }
-  const deleteTask = (id) => {
-    firestore.collection("tasks").doc(id + '').delete()
-  }
-  const editTask = (id) => {
-    firestore.collection("tasks").doc(id + '').set({ id, image, name, price,detail,amount })
-  }
   const rederTask = () => {
     if (tasks && tasks.length)
       return tasks.map((task, index) => {
@@ -51,8 +45,6 @@ const Store = (props) => {
                 <Card.Text>
                   Amount : {task.amount} ชิ้น
                 </Card.Text>
-                {/* <Button variant="danger" onClick={() => deleteTask(task.id)}>Delete</Button>
-                <Button variant="warning" style={{ marginLeft: 10 }} onClick={() => editTask(task.id)}>Edit</Button> */}
               </Card.Body>
             </Card>
 
@@ -62,10 +54,6 @@ const Store = (props) => {
       })
     else
       return <li>No Task</li>
-  }
-  const addTask = () => {
-    let id = (tasks.length === 0) ? 1 : tasks[tasks.length - 1].id + 1
-    firestore.collection("tasks").doc(id + '').set({ id, image, name, price, detail })
   }
   return (
     <>
