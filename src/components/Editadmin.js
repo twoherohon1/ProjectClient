@@ -4,7 +4,7 @@ import './Editadmin'
 
 const Editadmin = (props) => {
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor:"#CC0033"}}>
       <Navbar bg="light" expand="lg">
         <Navbar fixed="top" />
         <Navbar.Brand>
@@ -34,7 +34,7 @@ const Editadmin = (props) => {
           </Form>
         </Navbar.Collapse>
       </Navbar>
-      <h1>This is Admin Mode </h1>
+      <h1 >This is Admin Mode </h1>
       <h2>Can Modified Database in this website</h2>
     </div>
   )
