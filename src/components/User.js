@@ -98,7 +98,7 @@ const Store = (props) => {
           </Form>
         </Navbar.Collapse>
       </Navbar>
-      <div style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center',backgroundColor:'#CC99CC' }}>
         <h1>Cargo</h1>
         <ul style={{ display: 'flex', flex: 1, flexDirection: 'column' }}>{rederTask()}</ul>
       </div>
