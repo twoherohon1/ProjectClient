@@ -113,7 +113,7 @@ const Store = (props) => {
           <Form.Group controlId="formGroupDispensing">
             <Form.Label>Dispensing</Form.Label>
             <Form.Control type="text"
-              placeholder="text"
+              placeholder="Dispensing"
               value={dispensing}
               onChange={(e) => { setDispensing(e.target.value) }}
               style={{ width: 300 }}
