@@ -56,7 +56,6 @@ const LoginForm = (props) => {
         <p>Please sign-in</p>
 
         <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
-        <Button variant="primary" onClick={() => props.history.push('/home')}>Guest</Button>
       </div>
     )
   }

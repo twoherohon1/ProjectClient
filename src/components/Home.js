@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{ useEffect,useState} from 'react';
 import {
   Navbar, Button,
   Card, Form, Nav, FormControl, Carousel
