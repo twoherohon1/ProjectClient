@@ -79,7 +79,7 @@ const Store = (props) => {
           <Nav className="mr-auto">
             <Nav.Link
               onClick={() => props.history.push('/home')}>
-              Home
+              ReturnHome
               </Nav.Link>
             <Nav.Link
               onClick={() => props.history.push('/editcargo')}
@@ -98,7 +98,7 @@ const Store = (props) => {
           </Form>
         </Navbar.Collapse>
       </Navbar>
-      <div style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center',backgroundColor:'#99FF99' }}>
         <h1>แนะนำยาที่ควรซื้อ</h1>
         <Form >
           <Form.Group controlId="formGroupName">
