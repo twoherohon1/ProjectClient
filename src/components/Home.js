@@ -1,5 +1,8 @@
 import React from 'react';
-import { Navbar, Button, Form, Nav, FormControl, Carousel } from 'react-bootstrap';
+import {
+  Navbar, Button,
+  Card, Form, Nav, FormControl, Carousel
+} from 'react-bootstrap';
 import './Home.css'
 import firebase from 'firebase/app';
 
@@ -34,7 +37,7 @@ const Home = (props) => {
               onClick={() => props.history.push('/login')}
             >MyProfile
             </Nav.Link>
-            {firebase.auth().currentUser.email == "twoherohon1@gmail.com" ?
+            {firebase.auth().currentUser.email === "twoherohon1@gmail.com" ?
               <Nav.Link
                 onClick={() => props.history.push('/admin')}
               >AdminEdit
@@ -87,8 +90,28 @@ const Home = (props) => {
 
       </Carousel>
       <h1 className="App">อัพเดตข่าวสาร</h1>
+      <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+        <Card style={{ width: '50rem' }}>
+          <Card.Img variant="top" src="https://image.bangkokbiznews.com/kt/media/image/news/2020/03/10/869973/750x422_869973_1583811858.png"
+
+          />
+          <Card.Body>
+            <Card.Title>COVID-19</Card.Title>
+            <Card.Text>
+              ก่อนอื่นต้องทำความเข้าใจว่าไวรัสโคโรนา (Cov) คือ ไวรัสที่มีเครือข่ายขนาดใหญ่สามารถพบได้ทั้งในคนสัตว์
+              โดยไวรัสโคโรนาเป็นสาเหตุของความเจ็บป่วยหลากหลายระดับตั้งแต่ อาการหวัดธรรมดาจนไปถึงโรคระบบทางเดินหายใจ ซึ่งเกี่ยวข้องกับหลายโรคร้ายแรงอย่าง
+              MERS และ SARS ส่วนไวรัสโคโรนาในปัจจุบัน คือ โรค COVID-19 โดย คำว่า COVID-19 มีที่มาดังนี้ Co มาจากคำว่า Corona, VI มาจากคำว่า Virus ส่วน
+              D มาจาก Disease ซึ่งแปลว่าโรค ส่วน 19 คือ ปี 2019 สำหรับผู้ป่วยจะมีอาการเกี่ยวกับระบบทางเดินหายใจเป็นหลัก
+              ซึ่งระดับความรุนแรงคล้ายกันกับโรคทางเดินหายใจทั้งโรค MERS และ SARS
+    </Card.Text>
+
+          </Card.Body>
+        </Card>
+      </div>
+
+      {/* 
       <a href="https://www.bangkokbiznews.com/news/detail/869973">
-      <img src="https://image.bangkokbiznews.com/kt/media/image/news/2020/03/10/869973/750x422_869973_1583811858.png"  className="App1"></img>
+        <img src="https://image.bangkokbiznews.com/kt/media/image/news/2020/03/10/869973/750x422_869973_1583811858.png" className="App1"></img>
       </a>
       <h2 className="App">COVID-19</h2>
       <p>
@@ -97,7 +120,7 @@ const Home = (props) => {
         MERS และ SARS ส่วนไวรัสโคโรนาในปัจจุบัน คือ โรค COVID-19 โดย คำว่า COVID-19 มีที่มาดังนี้ Co มาจากคำว่า Corona, VI มาจากคำว่า Virus ส่วน
         D มาจาก Disease ซึ่งแปลว่าโรค ส่วน 19 คือ ปี 2019 สำหรับผู้ป่วยจะมีอาการเกี่ยวกับระบบทางเดินหายใจเป็นหลัก
         ซึ่งระดับความรุนแรงคล้ายกันกับโรคทางเดินหายใจทั้งโรค MERS และ SARS
-      </p>
+      </p> */}
     </div>
   )
 }
