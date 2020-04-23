@@ -36,9 +36,9 @@ const Store = (props) => {
       return tasks1.map((task, index) => {
         return (
           <>
-            <Card style={{ width: '18rem', marginTop: 10 }}>
-              <Card.Body>
-                <Card.Title> โรค : {task.sickness}</Card.Title>
+            <Card style={{ width: '50rem', marginTop: 10}}>
+              <Card.Body  style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}} >
+                <Card.Title style={{ju:'center'}}> โรค : {task.sickness}</Card.Title>
                 <Card.Text>
                   อาการ : {task.symptom}
                 </Card.Text>
@@ -48,8 +48,11 @@ const Store = (props) => {
                 <Card.Text>
                   คำเตือน : {task.warning}
                 </Card.Text>
-                <Button variant="danger" onClick={() => deleteTask(task.id)}>Delete</Button>
+                <div  style={{display:'flex',flexDirection : 'row'}}>
+                    <Button variant="danger" onClick={() => deleteTask(task.id)}>Delete</Button>
                 <Button variant="warning" style={{ marginLeft: 10 }} onClick={() => editTask(task.id)}>Edit</Button>
+                </div>
+              
               </Card.Body>
             </Card>
 
@@ -96,10 +99,10 @@ const Store = (props) => {
         </Navbar.Collapse>
       </Navbar>
       <div style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <h1>Cargo</h1>
+        <h1>แนะนำยาที่ควรซื้อ</h1>
         <Form >
           <Form.Group controlId="formGroupName">
-            <Form.Label>โรค</Form.Label>
+            <Form.Label >โรค</Form.Label>
             <Form.Control
               type="text"
               placeholder="Sickness" value={sickness}
